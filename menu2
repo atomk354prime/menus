@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Menu2 {
+    public static void main(String args[]){
+        int opcion = 0;
+    Scanner entrada = new Scanner(System.in);
+    System.out.println("-----------------------------");
+      System.out.println(".    Sistema de ventas      .");
+      System.out.println(".    Mariscos don jorge     .");
+      System.out.println("-----------------------------");
+      System.out.println(".          menu             .");
+      System.out.println(". 1) casuela de mariscos    .");
+      System.out.println(". 2) Sushi                  .");
+      System.out.println(". 3) pulpo                  .");
+      System.out.println(". 4) mojarra                .");
+      System.out.println("-----------------------------");
+    System.out.println("¿cual es su opcion?");
+        opcion = entrada.nextInt();
+      
+        System.out.println("su opcion es: ");
+        if (opcion==1){
+            System.out.println("Casuela de mariscos");
+            System.out.println("48.000cop ");
+            System.out.println("incluye la casuela patacon y un plato de arroz con ensalada ");
+        }else if (opcion==2){
+            System.out.println("Sushi:");
+            System.out.println("30.000cop");
+            System.out.println("incluye 12 piesas de sushi de su preferencia");
+        }else if (opcion==3){
+            System.out.println("Pulpo:");
+            System.out.println("25.000cop");
+            System.out.println("incluye pulpo, papas a la francesa, arroz y ensalada");
+        }else if (opcion==4){
+            System.out.println("Mojarra:");
+            System.out.println("20.000cop");
+            System.out.println("incluye la mojarra, papas a la fracesa, patacon y arroz ");
+        }
+
+    }
+    }
