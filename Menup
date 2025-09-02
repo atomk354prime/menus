@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Menup {
+    public static void main(String args[]) {
+        Scanner entrada = new Scanner(System.in);
+        int opcion = 0;
+        int cantidad = 0;
+
+        do {
+            // Menú principal
+            System.out.println("-----------------------------");
+            System.out.println(".    Sistema de ventas      .");
+            System.out.println(".    Mariscos Don Jorge     .");
+            System.out.println("-----------------------------");
+            System.out.println(".          MENÚ             .");
+            System.out.println(". 1) Casuela de mariscos    .");
+            System.out.println(". 2) Sushi                  .");
+            System.out.println(". 3) Pulpo                  .");
+            System.out.println(". 4) Mojarra                .");
+            System.out.println(". 5) Salir                  .");
+            System.out.println("-----------------------------");
+            System.out.print("¿Cuál es su opción?: ");
+            opcion = entrada.nextInt();
+
+            if (opcion >= 1 && opcion <= 4) {
+                // Submenú para cantidad
+                System.out.print("¿Cuántas unidades desea (1 a 4)?: ");
+                cantidad = entrada.nextInt();
+
+                if (cantidad < 1 || cantidad > 4) {
+                    System.out.println("Cantidad no válida, debe ser entre 1 y 4.");
+                } else {
+                    if (opcion == 1) {
+                        System.out.println("Su opción es: Casuela de mariscos");
+                        System.out.println("Precio unitario: 48.000 COP");
+                        System.out.println("Unidades: " + cantidad);
+                        System.out.println("Total: " + (48000 * cantidad) + " COP");
+                    } else if (opcion == 2) {
+                        System.out.println("Su opción es: Sushi");
+                        System.out.println("Precio unitario: 30.000 COP");
+                        System.out.println("Unidades: " + cantidad);
+                        System.out.println("Total: " + (30000 * cantidad) + " COP");
+                    } else if (opcion == 3) {
+                        System.out.println("Su opción es: Pulpo");
+                        System.out.println("Precio unitario: 25.000 COP");
+                        System.out.println("Unidades: " + cantidad);
+                        System.out.println("Total: " + (25000 * cantidad) + " COP");
+                    } else if (opcion == 4) {
+                        System.out.println("Su opción es: Mojarra");
+                        System.out.println("Precio unitario: 20.000 COP");
+                        System.out.println("Unidades: " + cantidad);
+                        System.out.println("Total: " + (20000 * cantidad) + " COP");
+                    }
+                }
+
+                System.out.println("\n--- Transacción realizada ---\n");
+
+            } else if (opcion == 5) {
+                System.out.println("Saliendo del sistema... ¡Gracias por su compra!");
+            } else {
+                System.out.println("Opción inválida, intente de nuevo.");
+            }
+
+        } while (opcion != 5);
+    }
+}
